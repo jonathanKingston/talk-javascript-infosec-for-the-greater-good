@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>JavaScript Infosec: For the greater good</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+  <link rel="stylesheet" href="slides.css">
+</head>
+<body class="full">
+  <section class="slide cover" id="cover">
+    <div>
+      <h1>JavaScript Infosec:<br />For the greater good</h2>
+    </div>
+  </section>
+
+<section class="slide" id="s01-intro" >
+<div>
+<h2>Intro</h2>
+<ul>
+<li>Jonathan Kingston (Lead Front End Developer - Cyber AMI)
+<ul>
+<li><a href="https://secure.fail">secure.fail</a></li>
+<li><a href="https://twitter.com/KingstonTime">@kingstonTime</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s02-attacks" >
+<div>
+<h2>Attacks</h2>
+<ul>
+<li>Malicious ads and financial data</li>
+<li>Considered backend</li>
+</ul>
+<ul>
+<li><strong>Content Security Policy</strong></li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s03-what-csp-does" >
+<div>
+<h2>What CSP does</h2>
+<ul>
+<li>Set of capabilities browsers restrict on</li>
+<li>Prevents attacker wanting more abilities</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s04-what-csp-looks-like" >
+<div>
+</div>
+</section>
+
+<section class="slide" id="s05-why-csp-matters" >
+<div>
+<h2>Why CSP matters</h2>
+<blockquote>
+<p>&quot;I discount the probability of perfection&quot; - Alex Russell</p>
+</blockquote>
+<blockquote>
+<p>&quot;We are all idiots with deadlines.&quot; - Mike West</p>
+</blockquote>
+</div>
+</section>
+
+<section class="slide" id="s06-demo" >
+<div>
+<h2>Demo time</h2>
+<p><a href="/demo/goodies">No security</a></p>
+<p><a href="/demo/baddies">CSP enabled</a></p>
+</div>
+</section>
+
+<section class="slide" id="s07-who-is-finding-it-tough" >
+<div>
+<h2>Who is finding it tough</h2>
+<ul>
+<li><a href="https://scotthelme.co.uk/">Scott Helme</a>
+<ul>
+<li>modpagespeed is adding data: and 'unsafe-eval' script usage</li>
+<li>Disqus requires 'unsafe-eval' and 'unsafe-inline' CSS</li>
+</ul>
+</li>
+<li><a href="https://certsimple.com">Certsimple</a>
+<ul>
+<li>Ractive is using 'unsafe-eval' scripts</li>
+<li>Selectize using 'unsafe-inline' CSS</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s08-top-million-sites" >
+<div>
+<h2>&quot;only a fraction over 2% of the top 1 million sites showed any indication of CSP&quot;</h2>
+</div>
+</section>
+
+<section class="slide" id="s09-why-is-it-hard" >
+<div>
+<h2>Why is it hard</h2>
+<ul>
+<li>Isolating big sites</li>
+<li>The web is old and behaves badly</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s10-libraries" >
+<div>
+<h2>Libraries</h2>
+<ul>
+<li>Libraries have a far reaching impact to the web.
+<ul>
+<li>Educate the wider web</li>
+<li>Despite testing, they open up other applications</li>
+<li>Don't fail your users (various marketing libs!)</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s11-libs-most-restrictive" >
+<div>
+<h2>Libs: Most restrictive policy first</h2>
+<p>Lock all the doors and turn the lights off... then start building your application.</p>
+<pre><code>Content-Security-Policy:
+default-src 'none';
+frame-ancestors 'none';
+form-action 'none';
+block-all-mixed-content;
+sandbox;
+reflected-xss block;
+referrer no-referrer;
+</code></pre>
+</div>
+</section>
+
+<section class="slide" id="s12-libs-make-it-static" >
+<div>
+<h2>Libs: Make it static</h2>
+<ul>
+<li>Easier to test</li>
+<li>Provide roll out and update</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s13-provide-an-example-policy" >
+<div>
+<h2>Provide an example policy</h2>
+<ul>
+<li>Explain what it is tested with</li>
+<li>Inform developers if new requirements are needed</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s14-JSON-CSP" >
+<div>
+<h2>JSON CSP</h2>
+<ul>
+<li>Simpler to merge</li>
+<li>Better ecosystem</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s15-reporting" >
+<div>
+<h2>Reporting and testing</h2>
+<ul>
+<li>Use automated tests</li>
+<li>Tighten policies with reporting
+<ul>
+<li><a href="https://report-uri.io">report-uri.io</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s16-secure-fail" >
+<div>
+<h2>secure.fail</h2>
+<ul>
+<li>Slam bad behaviour</li>
+<li>Sign up to mailing list</li>
+</ul>
+</div>
+</section>
+
+<section class="slide" id="s17-thanks" >
+<div>
+<h2>Thanks &amp; Any questions</h2>
+<ul>
+<li>Jonathan Kingston <a href="https://twitter.com/KingstonTime">@kingstonTime</a></li>
+<li>Questions etc</li>
+</ul>
+<ul>
+<li>Thanks again</li>
+<li><a href="http://cyber-ami.com">Cyber AMI</a></li>
+<li><a href="http://caolan.org/">Caolan McMahon</a></li>
+<li><a href="https://scotthelme.co.uk/">Scott Helme</a></li>
+<li><a href="https://certsimple.com/">CertSimple</a></li>
+<li><a href="http://photocollections.io/">Photo Collections</a></li>
+<li><a href="http://superfamous.com/">Superfamous</a></li>
+</ul>
+</div>
+</section>
+
+  <div class="progress"><div></div></div>
+  <script src="node_modules/markdown-it/dist/markdown-it.min.js"></script>
+  <script src="node_modules/shower-core/shower.min.js"></script>
+<!--
+  <script src="glitch-canvas.min.js"></script>
+  <canvas ></canvas>
+  <img />
+  <script src="glitchin.js" ></script>
+-->
+</body>
+</html>

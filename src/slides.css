@@ -1,0 +1,226 @@
+#cover h1 {
+  margin:30px 0 0;
+  color:#FFF;
+  text-align:center;
+  font-size:70px;
+}
+#cover p {
+  margin:10px 0 0;
+  text-align:center;
+  color:#FFF;
+  font-style:italic;
+  font-size:20px;
+}
+#Cover p a {
+  color:#FFF;
+}
+
+/*#s02-attacks h2, #s03-what-csp-does h2, #s05-why-csp-matters h2, #s07-who-is-finding-it-tough h2, #s09-why-is-it-hard h2 {
+*/
+.slide h2 {
+  color: #000;
+}
+
+.slide ol li::before, .slide ul li::before {
+  color: #262626;
+}
+
+#s01-intro h2 {
+  display: none;
+}
+
+#s01-intro {
+ background: url(images/Beachwood-Canyon-Drum/1600x1068.jpg);
+ background-size: 100%;
+}
+
+#s01-intro div {
+  padding: 45px 120px 0;
+}
+
+#s01-intro a {
+  color: black;
+}
+
+#s01-intro li::before {
+  display: none;
+}
+
+#s01-intro ul ul li {
+  display: inline;
+}
+
+#s01-intro ul ul li:last-of-type {
+  margin-left: 36px;
+}
+
+#s02-attacks {
+  background: url(images/Old-Electricity-House/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s02-attacks > div, #s03-what-csp-does > div {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  font-size: 32px;
+  padding: 297px 120px 0;
+}
+#s02-attacks > div {
+  color: white;
+  padding: 8px 66px 0;
+}
+#s02-attacks h2 {
+  color: white;
+}
+
+#s02-attacks ul:last-of-type li:last-of-type {
+  position: absolute;
+  top: 95px;
+  color: white;
+  right: 33px;
+}
+
+
+#s03-what-csp-does {
+ background: url(images/Log-Across-the-River/1600x1068.jpg) 0;
+ background-size: 100%;
+}
+
+#s04-what-csp-looks-like {
+ background: url(images/response-headers.png);
+}
+
+#s05-why-csp-matters {
+ background: url(images/Railroad/1600x1068.jpg);
+ background-size: 100%;
+}
+
+#s05-why-csp-matters h2 {
+  position: absolute;
+  top: 15px;
+  right: 200px;
+}
+#s05-why-csp-matters p {
+  background: #fff;
+}
+
+#s05-why-csp-matters blockquote::before {
+  display: none;
+}
+#s05-why-csp-matters blockquote {
+  transform: rotate(-3deg);
+}
+#s05-why-csp-matters blockquote:last-of-type {
+  transform: rotate(5deg);
+  width: 32rem;
+  position: absolute;
+  bottom: 20px;
+}
+
+#s06-demo {
+  background: url(images/Her-Eye/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s07-who-is-finding-it-tough {
+  background: url(images/Native-Fishing-Dock/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s07-who-is-finding-it-tough > div {
+  background-color: rgba(255,255,255,0.2);
+}
+
+#s07-who-is-finding-it-tough a {
+  color: #000;
+}
+
+#s08-top-million-sites {
+ background: url(images/csp-usage.png) -56px -27px;
+}
+
+#s09-why-is-it-hard {
+  background: url(images/Foggy-Hills/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s10-libraries {
+  background: url(images/Stairwell/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s11-libs-most-restrictive {
+  background: url(images/Eagle/1600x1068.jpg);
+  background-size: 100%;
+}
+#s11-libs-most-restrictive > div {
+  padding-top: 33px;
+}
+
+#s11-libs-most-restrictive code {
+  position: absolute;
+  bottom: 0;
+  right: 67px;
+  font-size: 20px;
+}
+
+#s12-libs-make-it-static {
+  background: url(images/Windmill/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s13-provide-an-example-policy {
+  background: url(images/Red-Rose/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s13-provide-an-example-policy h2 {
+  color: white;
+}
+#s13-provide-an-example-policy > div {
+  padding-top: 29px;
+  color: white;
+}
+
+#s14-JSON-CSP {
+  background: url(images/Jellyfish/1600x1068.jpg);
+  background-size: 100%;
+}
+#s14-JSON-CSP > div {
+  padding: 416px 815px 0;
+}
+
+#s15-reporting {
+  background: url(images/Green-Seeds/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s16-secure-fail {
+  background: url(images/Lobster/1600x1068.jpg);
+  background-size: 100%;
+}
+#s16-secure-fail h2 {
+  color: white;
+}
+#s16-secure-fail > div {
+  padding-top: 23px;
+  color: white;
+}
+
+#s17-thanks {
+  background: url(images/Ice-Fire/1600x1068.jpg);
+  background-size: 100%;
+}
+
+#s17-thanks h2 {
+  color: white;
+}
+#s17-thanks > div {
+  color: white;
+  padding: 16px 53px 0;
+}
+#s17-thanks li::before {
+  color: transparent;
+}

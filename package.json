@@ -1,0 +1,37 @@
+{
+  "name": "talk-javascript-infosec-for-the-greater-good",
+  "version": "0.0.1",
+  "description": "Talk about CSP and security",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./lib/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jonathanKingston/talk-javascript-infosec-for-the-greater-good.git"
+  },
+  "keywords": [
+    "talk",
+    "infosec",
+    "security",
+    "CSP"
+  ],
+  "author": "Jonathan Kingston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathanKingston/talk-javascript-infosec-for-the-greater-good/issues"
+  },
+  "homepage": "https://github.com/jonathanKingston/talk-javascript-infosec-for-the-greater-good#readme",
+  "devDependencies": {
+    "markdown-it": "^4.4.0"
+  },
+  "dependencies": {
+    "shower-core": "^1.0.7",
+    "shower-ribbon": "^1.0.11",
+    "blankie": "^1.1.1",
+    "hapi": "^9.0.3",
+    "inert": "^3.0.1",
+    "scooter": "^2.0.1"
+  }
+}
