@@ -54,6 +54,10 @@
 
 <section class="slide" id="s04-what-csp-looks-like" >
 <div>
+<h2>What does CSP look like</h2>
+<ul>
+<li>Report only and policy</li>
+</ul>
 </div>
 </section>
 
@@ -72,8 +76,8 @@
 <section class="slide" id="s06-demo" >
 <div>
 <h2>Demo time</h2>
-<p><a href="/demo/goodies">No security</a></p>
-<p><a href="/demo/baddies">CSP enabled</a></p>
+<p><a href="/demo/bad">No security</a></p>
+<p><a href="/demo/good">CSP enabled</a></p>
 </div>
 </section>
 
@@ -81,16 +85,16 @@
 <div>
 <h2>Who is finding it tough</h2>
 <ul>
-<li><a href="https://scotthelme.co.uk/">Scott Helme</a>
-<ul>
-<li>modpagespeed is adding data: and 'unsafe-eval' script usage</li>
-<li>Disqus requires 'unsafe-eval' and 'unsafe-inline' CSS</li>
-</ul>
-</li>
-<li><a href="https://certsimple.com">Certsimple</a>
+<li><a href="https://certsimple.com"><img src="images/CertSimple.png" alt="CertSimple"></a>
 <ul>
 <li>Ractive is using 'unsafe-eval' scripts</li>
 <li>Selectize using 'unsafe-inline' CSS</li>
+</ul>
+</li>
+<li><strong><a href="https://scotthelme.co.uk/">Scott Helme</a></strong>
+<ul>
+<li>modpagespeed is adding data: and 'unsafe-eval' script usage</li>
+<li>Disqus requires 'unsafe-eval' and 'unsafe-inline' CSS</li>
 </ul>
 </li>
 </ul>

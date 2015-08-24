@@ -15,8 +15,6 @@
   color:#FFF;
 }
 
-/*#s02-attacks h2, #s03-what-csp-does h2, #s05-why-csp-matters h2, #s07-who-is-finding-it-tough h2, #s09-why-is-it-hard h2 {
-*/
 .slide h2 {
   color: #000;
 }
@@ -41,6 +39,10 @@
 #s01-intro a {
   color: black;
 }
+#s01-intro ul {
+  font-size: 28px;
+  font-weight: bold;
+}
 
 #s01-intro li::before {
   display: none;
@@ -59,6 +61,17 @@
   background-size: 100%;
 }
 
+#s02-attacks li::before {
+  color: transparent;
+}
+
+#s02-attacks li {
+  background-color: black;
+  width: 440px;
+  padding: 5px;
+  line-height: 1;
+}
+
 #s02-attacks > div, #s03-what-csp-does > div {
   box-sizing: border-box;
   height: 100%;
@@ -67,6 +80,11 @@
   font-size: 32px;
   padding: 297px 120px 0;
 }
+
+#s03-what-csp-does > div {
+  background: rgba(182, 180, 219, 0.5);
+}
+
 #s02-attacks > div {
   color: white;
   padding: 8px 66px 0;
@@ -75,11 +93,18 @@
   color: white;
 }
 
+#s02-attacks ul:first-of-type li:last-of-type {
+  transform: rotate(-7deg);
+  position: relative;
+  top: 32px;
+}
+
 #s02-attacks ul:last-of-type li:last-of-type {
   position: absolute;
-  top: 95px;
   color: white;
   right: 33px;
+  transform: rotate(-16deg);
+  bottom: 68px;
 }
 
 
@@ -89,7 +114,13 @@
 }
 
 #s04-what-csp-looks-like {
- background: url(images/response-headers.png);
+ background: url(images/csp.png) no-repeat #fff;
+ background-position-y: 60%;
+ background-size: 100%;
+}
+
+#s04-what-csp-looks-like > div {
+  padding: 63px 120px 0;
 }
 
 #s05-why-csp-matters {
@@ -124,17 +155,54 @@
   background-size: 100%;
 }
 
+#s06-demo > div {
+  padding: 40px 120px 0;
+}
+
+#s06-demo a {
+  font-size: 34px;
+  color: #000;
+  font-weight: bold;
+  background: none;
+}
+#s06-demo a:first-of-type {
+  position: absolute;
+  left: 582px;
+  top: 182px;
+  transform: rotate(-16deg);
+}
+#s06-demo p:last-of-type a {
+  position: absolute;
+  top: 300px;
+  left: 570px;
+  transform: rotate(21deg);
+}
+
 #s07-who-is-finding-it-tough {
   background: url(images/Native-Fishing-Dock/1600x1068.jpg);
   background-size: 100%;
 }
 
+#s07-who-is-finding-it-tough > div > ul {
+  margin-top: -66px;
+}
+
+#s07-who-is-finding-it-tough img {
+  width: 597px;
+  margin: 0 0 -78px -76px;
+  padding: 0;
+}
+
 #s07-who-is-finding-it-tough > div {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.7);
+}
+#s07-who-is-finding-it-tough > div > ul > li::before {
+  color: transparent;
 }
 
 #s07-who-is-finding-it-tough a {
   color: #000;
+  background: none;
 }
 
 #s08-top-million-sites {
@@ -149,6 +217,27 @@
 #s10-libraries {
   background: url(images/Stairwell/1600x1068.jpg);
   background-size: 100%;
+}
+
+#s10-libraries > div {
+  background-color: rgba(0, 0, 0, 0.44);
+}
+
+#s10-libraries h2 {
+  color: white;
+}
+
+#s10-libraries ul li::before {
+  color: transparent;
+}
+#s10-libraries ul {
+  position: absolute;
+  color: white;
+  right: 10px;
+  width: 600px;
+  font-size: 29px;
+  font-weight: bold;
+  line-height: 88px;
 }
 
 #s11-libs-most-restrictive {
@@ -197,6 +286,24 @@
   background-size: 100%;
 }
 
+#s15-reporting li::before {
+  display: none;
+}
+
+#s15-reporting h2 {
+  color: white;
+}
+
+#s15-reporting li {
+  background-color: white;
+  padding-left: 3em;
+  margin-bottom: 1em;
+}
+
+#s15-reporting li ul, #s15-reporting li ul li {
+  display: inline;
+}
+
 #s16-secure-fail {
   background: url(images/Lobster/1600x1068.jpg);
   background-size: 100%;
@@ -223,4 +330,13 @@
 }
 #s17-thanks li::before {
   color: transparent;
+}
+#s17-thanks a {
+  font-weight: bold;
+  color: white;
+}
+
+#s17-thanks ul:last-of-type {
+  top: -54px;
+  position: relative;
 }

@@ -1,7 +1,7 @@
 ## Demo time
 
 
-[No security](/demo/goodies)
+[No security](/demo/bad)
 
-[CSP enabled](/demo/baddies)
+[CSP enabled](/demo/good)
 
