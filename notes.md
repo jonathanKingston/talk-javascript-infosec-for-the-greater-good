@@ -1,6 +1,6 @@
 # Intro
 
-Hi, in this talk I'm going to be speaking about frontend security to protect against malicious content on the web.
+Hi, in this talk I'm going to be speaking about front end security to protect against malicious content on the web.
 
 The main focus of this talk is to help us stitch better security into the web.
 
@@ -9,7 +9,7 @@ The main focus of this talk is to help us stitch better security into the web.
 
 The attacks available online range from displaying adverts maliciously to stealing of financial data.
 
-Security was traditionally considered just a backend job to protect. that is still the case;
+Security was traditionally considered just a back end job to protect. that is still the case;
 however SPA and the internet of things really make FE security an requirement.
 
 CSP is the concept I will be using to prevent these attacks.
@@ -59,7 +59,7 @@ Basically, people make mistakes and CSP is a great protection in all good browse
 
 # Why is it hard
 
-Locking down capabilities of a big site is actually difficult. In a larger organisation where many developers are involved in each page it becomes dificult to work out what the site is doing.
+Locking down capabilities of a big site is actually difficult. In a larger organisation where many developers are involved in each page it becomes difficult to work out what the site is doing.
 
 - Lack of role in a company to do that
 

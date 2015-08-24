@@ -1,7 +1,7 @@
 ## Attacks
 
 - Malicious ads and financial data
-- Considered backend
+- Considered back end
 
 
 - **Content Security Policy**
