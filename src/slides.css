@@ -23,6 +23,10 @@
   color: #262626;
 }
 
+section.slide.active {
+  margin-left: auto;
+}
+
 #s01-intro h2 {
   display: none;
 }
