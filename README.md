@@ -2,7 +2,7 @@
 
 ## See notes
 
-./notes.md contains the talk notes
+[./notes.md](./notes.md) contains the talk notes
 
 ## Running the slides
 

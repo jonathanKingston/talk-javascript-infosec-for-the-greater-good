@@ -1,8 +1,10 @@
 # Intro
 
-Hi, in this talk I'm going to be speaking about front end security to protect against malicious content on the web.
+In this talk I'm going to be speaking about front end security to protect against malicious content on the web.
 
 The main focus of this talk is to help us stitch better security into the web.
+
+The notes, slides and demos are available online and will share the link at the end of the talk.
 
 
 # Attacks
@@ -10,7 +12,9 @@ The main focus of this talk is to help us stitch better security into the web.
 The attacks available online range from displaying adverts maliciously to stealing of financial data.
 
 Security was traditionally considered just a back end job to protect. that is still the case;
-however SPA and the internet of things really make FE security an requirement.
+however SPA, offline web and the internet of things really make FE security an requirement.
+
+OWASP and WhiteHat sec either vote XSS the highest vulnerability or close to that. With stats ranging from 49% of sites being impacted.
 
 CSP is the concept I will be using to prevent these attacks.
 
@@ -27,7 +31,7 @@ These restrictions then prevent an attacker from executing code that really wasn
 
 # CSP looks like
 
-![Series of headers demonstrating security](response-headers.png)
+![Series of headers demonstrating security](src/images/response-headers.png)
 
 # Why does CSP matter?
 
@@ -55,7 +59,7 @@ Basically, people make mistakes and CSP is a great protection in all good browse
 
 # Top million sites
 
-![Graph showing low 1-2% usage of CSP in the top million sites](images/csp-usage.png)
+![Graph showing low 1-2% usage of CSP in the top million sites](src/images/csp-usage.png)
 
 # Why is it hard
 
@@ -140,16 +144,20 @@ So this will only be for FE for now as the disclosure battle isn't something I w
 
 # Thanks & any questions
 
-http://www.cspplayground.com/
-http://content-security-policy.com/
-http://www.w3.org/TR/CSP2/
+[cspplayground.com](http://www.cspplayground.com/)
+[content-security-policy.com](http://content-security-policy.com/)
+[CSP specification](http://www.w3.org/TR/CSP2/)
+[csptester.io](http://csptester.io/)
+[Automate testing](https://github.com/yahoo/csptester/blob/master/csp-validator/csp-validator.js)
 
+```
+phantomjs csp-validator.js https://website.com
+```
 
 [Blob exploit](https://raw.githubusercontent.com/hillbrad/CSP/master/support/buildBlobEval.php)
 [JSON CSP](https://gist.github.com/jonathanKingston/5699b440f608960dc089)
 [Exploit handbook](https://code.google.com/p/browsersec/wiki/Part1#Cascading_stylesheets)
 [CSS escape](https://github.com/mathiasbynens/cssesc)
-
-
+[WhiteHat security report](http://info.whitehatsec.com/rs/whitehatsecurity/images/statsreport2014-20140410.pdf)
 [Security header usage](https://scotthelme.co.uk/how-widely-used-are-security-based-http-response-headers/)
 [Empty violation report](http://stackoverflow.com/questions/32106363/what-should-i-do-if-i-get-an-empty-csp-violation)
