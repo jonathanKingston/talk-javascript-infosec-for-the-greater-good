@@ -66,6 +66,13 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path:'/notes',
+  handler: function (request, reply) {
+    reply.file('notes.html');
+  }
+});
 
 
 server.start(function() {

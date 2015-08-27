@@ -4,6 +4,7 @@
   text-align:center;
   font-size:70px;
 }
+
 #cover p {
   margin:10px 0 0;
   text-align:center;
@@ -11,8 +12,11 @@
   font-style:italic;
   font-size:20px;
 }
-#Cover p a {
+#cover a {
   color:#FFF;
+  text-align: center;
+  left: 473px;
+  position: absolute;
 }
 
 .slide h2 {

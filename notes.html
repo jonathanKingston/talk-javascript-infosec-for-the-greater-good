@@ -1,0 +1,116 @@
+<!DOCTYPE html><html><body><h1>Intro</h1>
+<p>In this talk I'm going to be speaking about front end security to protect against malicious content on the web.</p>
+<p>The main focus of this talk is to help us stitch better security into the web.</p>
+<p>The notes, slides and demos are available online and will share the link at the end of the talk.</p>
+<h1>Attacks</h1>
+<p>The attacks available online range from displaying adverts maliciously to stealing of financial data.</p>
+<p>Security was traditionally considered just a back end job to protect. that is still the case;
+however SPA, offline web and the internet of things really make FE security an requirement.</p>
+<p>OWASP and WhiteHat sec either vote XSS the highest vulnerability or close to that. With stats ranging from 49% of sites being impacted.</p>
+<p>CSP is the concept I will be using to prevent these attacks.</p>
+<h1>What CSP does</h1>
+<p>Content security policies are a defined set of restrictions which get transmitted when you load a web page.</p>
+<p>I see CSP as a very similar principle to accepting app permissions on phones.</p>
+<p>This allows website owners to define a set of capabilities their site uses and the browser will enforce those as restrictions on the code that runs.</p>
+<p>These restrictions then prevent an attacker from executing code that really wasn't designed to run.</p>
+<h1>CSP looks like</h1>
+<p><img src="images/response-headers.png" alt="Series of headers demonstrating security"></p>
+<h1>Why does CSP matter?</h1>
+<p>&quot;I discount the probability of perfection&quot; - Alex Russell</p>
+<p>&quot;We are all idiots with deadlines.&quot; - Mike West</p>
+<p>Basically, people make mistakes and CSP is a great protection in all good browsers that support it. The more layers of security we can add the smaller the dependency there is on perfect setup.</p>
+<h1>Demo</h1>
+<p><a href="http://codepen.io/anon/pen/xGopeB">No security</a></p>
+<p><a href="http://codepen.io/anon/pen/bdPqPR">CSP enabled</a></p>
+<h1>Who is finding it tough</h1>
+<ul>
+<li>everyone?</li>
+<li>https://scotthelme.co.uk/
+<ul>
+<li>modpagespeed is adding data: and 'unsafe-eval' script usage</li>
+<li>Disqus requires 'unsafe-eval' and 'unsafe-inline' CSS</li>
+</ul>
+</li>
+<li>https://certsimple.com
+<ul>
+<li>Ractive is using 'unsafe-eval' scripts</li>
+<li>Selectize using 'unsafe-inline' CSS</li>
+</ul>
+</li>
+</ul>
+<h1>Top million sites</h1>
+<p><img src="images/csp-usage.png" alt="Graph showing low 1-2% usage of CSP in the top million sites"></p>
+<h1>Why is it hard</h1>
+<p>Locking down capabilities of a big site is actually difficult. In a larger organisation where many developers are involved in each page it becomes difficult to work out what the site is doing.</p>
+<ul>
+<li>
+<p>Lack of role in a company to do that</p>
+</li>
+<li>
+<p>Tooling</p>
+</li>
+<li>
+<p>visibility</p>
+</li>
+</ul>
+<p>Common issues</p>
+<ul>
+<li>eval</li>
+</ul>
+<h1>Libraries</h1>
+<p>One of the main problems of an application developer is using third party code and libraries.</p>
+<p>I think libraries are most used to testing their code in isolation for security flaws.
+However what I think needs to be said, is that libraries are responsible for the security of the apps that use them.</p>
+<h2>Libraries have a far reaching impact to the web.</h2>
+<h3>Demonstrate to their users</h3>
+<h3>Despite testing open up other applications</h3>
+<h3>A library is responsible to it's users</h3>
+<h1>Libs: start with the most restrictive policy first</h1>
+<p>Start with the most restrictive policy first:</p>
+<pre><code>Content-Security-Policy: default-src 'none' ; frame-ancestors 'none' ; form-action 'none' ; block-all-mixed-content; sandbox; reflected-xss block; referrer no-referrer;
+</code></pre>
+<p>Soon you will need to add in other policies like allowing scripts and your addon URLs.</p>
+<h1>Libs: make it static</h1>
+<ul>
+<li>Turn it all off first then turn directives back on when you 100% need them</li>
+</ul>
+<p>For example <code>style=&quot;color:red;&quot;</code> can be replaced with <code>dom.style.color = 'red';</code></p>
+<h1>Libs: Provide an example report</h1>
+<p>Showing users how to integrate
+Users will find it hard to find out themselves; in some cases as hard as 'the halting problem'.
+If you can make parts of you app optional that is cool too.</p>
+<h1>JSON CSP</h1>
+<p>So I have started to make a new standard because; you know it's not like FE doesn't have enough to learn.</p>
+<p>Actually all JSON CSP is for is just specifying a more universal format that can be used across the web.</p>
+<p>JSON CSP is there for application authors to consume the policies of the libraries they use to make a composite policy that is easier to maintain.</p>
+<p>Relationship between both application universe and library sphere.</p>
+<p>Obviously this is at the moment mostly a goal to secure the net, however there appears to be great traction to using this through frameworks in only several weeks.</p>
+<h1>Reporting &amp; testing</h1>
+<p>Reporting and testing go hand in hand, testing helps stomp out most of the issues before it goes live.</p>
+<p>Before getting to the site your code where possible should be tested.</p>
+<p>Reporting is actually really important to review how your application is performing.
+You can actually use both a policy and a report only policy.</p>
+<h1>secure.fail</h1>
+<p>So that is the carrots over with, Secure.fail is a site that I am working on to be the stick of FE security.</p>
+<p>Giving libraries new resources to implement security is great, however we need to back that up with something that also tells websites and libraries that they are doing badly.</p>
+<p>So this will only be for FE for now as the disclosure battle isn't something I want to get into.</p>
+<h1>Thanks &amp; any questions</h1>
+<ul>
+<li><a href="http://www.cspplayground.com/">cspplayground.com</a></li>
+<li><a href="http://content-security-policy.com/">content-security-policy.com</a></li>
+<li><a href="http://www.w3.org/TR/CSP2/">CSP specification</a></li>
+<li><a href="http://csptester.io/">csptester.io</a></li>
+<li><a href="https://github.com/yahoo/csptester/blob/master/csp-validator/csp-validator.js">Automate testing</a></li>
+</ul>
+<pre><code>phantomjs csp-validator.js https://website.com
+</code></pre>
+<ul>
+<li><a href="https://raw.githubusercontent.com/hillbrad/CSP/master/support/buildBlobEval.php">Blob exploit</a></li>
+<li><a href="https://gist.github.com/jonathanKingston/5699b440f608960dc089">JSON CSP</a></li>
+<li><a href="https://code.google.com/p/browsersec/wiki/Part1#Cascading_stylesheets">Exploit handbook</a></li>
+<li><a href="https://github.com/mathiasbynens/cssesc">CSS escape</a></li>
+<li><a href="http://info.whitehatsec.com/rs/whitehatsecurity/images/statsreport2014-20140410.pdf">WhiteHat security report</a></li>
+<li><a href="https://scotthelme.co.uk/how-widely-used-are-security-based-http-response-headers/">Security header usage</a></li>
+<li><a href="http://stackoverflow.com/questions/32106363/what-should-i-do-if-i-get-an-empty-csp-violation">Empty violation report</a></li>
+</ul>
+</body></html>
