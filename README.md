@@ -1,5 +1,9 @@
 # JavaScript infosec: for the greater good
 
+## See the slides
+
+[Run slides online](https://javascript-infosec.herokuapp.com)
+
 ## See notes
 
 [./notes.md](./notes.md) contains the talk notes
